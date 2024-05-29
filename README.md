@@ -88,12 +88,23 @@ python3 app.py file1.docx file2.docx
 - [ ] Add support for batch conversion with progress indicators
 - [x] Implement a graphical user interface (GUI) for ease of use
 - [ ] Add logging for debugging and usage tracking
+- [ ] Add support for additional file formats (e.g., plain text, images)
+- [ ] Enhance the UI/UX of the GUI for better usability
+- [ ] Implement integration with document management systems and cloud services (e.g., Google Drive, Dropbox)
 
 ### Phase 4: Documentation and Community
 
 - [ ] Create detailed user documentation
 - [ ] Set up a contribution guide for open-source contributors
 - [ ] Implement continuous integration (CI) for automated testing
+- [ ] Develop video tutorials and example use cases
+
+### Phase 5: Advanced Features
+
+- [ ] Implement a scheduler for automated, periodic conversions and printings
+- [ ] Develop a REST API to allow integration with other software systems
+- [ ] Add user authentication and permissions management for better security in multi-user environments
+- [ ] Create an admin dashboard for monitoring and managing conversions and print jobs
 
 ## Contributing
 
@@ -102,3 +113,9 @@ Contributions are welcome! Please fork the repository and use a feature branch. 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Mission
+
+The mission of ConvertyPDF is to provide an efficient and user-friendly tool for converting various file formats into PDFs, streamlining the workflow for businesses and individuals alike. By automating the conversion and printing processes, we aim to save time and reduce manual effort, allowing users to focus on more important tasks.
+
+We welcome contributions from the community! Whether you are a developer, tester, or user with ideas for improvement, we encourage you to contribute in any way you can. ConvertyPDF is a powerful and versatile tool for everyone.
