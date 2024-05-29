@@ -1,4 +1,4 @@
-# ConvertifyPDF
+# ConvertyPDF
 
 ![Churro Mascot](./assets/convertyPDF_churro_mascotte.png)
 
@@ -6,7 +6,7 @@ ConvertifyPDF is a versatile CLI tool for converting various file formats, inclu
 
 ## Requirements
 
-- Python 3.x
+- Python 3.7.13+ (tested)
 - [Pandoc](https://pandoc.org/installing.html) installed on the system
 - Tested on macOS
 
@@ -22,7 +22,7 @@ ConvertifyPDF is a versatile CLI tool for converting various file formats, inclu
 2. **Create and activate the virtual environment**:
 
    ```sh
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -34,12 +34,18 @@ ConvertifyPDF is a versatile CLI tool for converting various file formats, inclu
 
 ## Usage
 
+### GUI
+
+```sh
+python3 app_gui.py
+```
+
 ### Command Line Conversion
 
 To convert one or more Word files to PDF without printing:
 
 ```sh
-python app.py file1.docx file2.docx
+python3 app.py file1.docx file2.docx
 ```
 
 ### Optional Flags
@@ -47,13 +53,13 @@ python app.py file1.docx file2.docx
 - To print files after conversion:
 
   ```sh
-  python app.py file1.docx file2.docx --print
+  python3 app.py file1.docx file2.docx --print
   ```
 
 - To apply additional formatting to the PDF:
 
   ```sh
-  python app.py file1.docx file2.docx --formatted
+  python3 app.py file1.docx file2.docx --formatted
   ```
 
 ## Features
@@ -73,14 +79,14 @@ python app.py file1.docx file2.docx
 ### Phase 2: Testing and Compatibility
 
 - [ ] Test on Windows
-- [ ] Test on additional macOS versions
+- [x] Test on additional macOS versions
 - [ ] Ensure compatibility with different versions of Python (3.x)
 - [ ] Convert multiple types of files (Excel, PowerPoint) into PDF with one single command
 
 ### Phase 3: Enhancements
 
 - [ ] Add support for batch conversion with progress indicators
-- [ ] Implement a graphical user interface (GUI) for ease of use
+- [x] Implement a graphical user interface (GUI) for ease of use
 - [ ] Add logging for debugging and usage tracking
 
 ### Phase 4: Documentation and Community
@@ -96,7 +102,3 @@ Contributions are welcome! Please fork the repository and use a feature branch. 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-```
