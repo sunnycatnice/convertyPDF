@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\ConvertToPDF]
+@="Convert to PDF"
+
+[HKEY_CLASSES_ROOT\*\shell\ConvertToPDF\command]
+@="\"C:\\path\\to\\your\\app_gui.exe\" \"%1\""
