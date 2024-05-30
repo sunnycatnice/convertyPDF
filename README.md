@@ -34,7 +34,11 @@ ConvertifyPDF is a versatile CLI tool for converting various file formats, inclu
 
 ## Usage
 
+---
+
 ### GUI
+
+To launch the graphical user interface (GUI):
 
 ```sh
 python3 app_gui.py
@@ -67,6 +71,8 @@ python3 app.py file1.docx file2.docx
 - **Convert Files to PDF**: Convert various file formats, including Word, Excel, and PowerPoint, to PDF.
 - **Optional Printing**: Print the converted PDF files.
 - **Formatting Option**: Apply additional formatting to the PDF files, including removing table borders, adding cell padding, and adjusting paragraph spacing.
+- **Select Output Directory**: Choose the directory where the converted PDFs will be saved and optionally specify a custom name for the output folder.
+- **Batch Conversion**: Convert multiple files at once, either by selecting individual files or entire folders.
 
 ## Roadmap
 
@@ -75,10 +81,11 @@ python3 app.py file1.docx file2.docx
 - [x] Convert Word files to PDF
 - [x] Implement optional printing of PDF files
 - [x] Add formatting options (removing borders, adding padding, adjusting spacing)
+- [x] Allow selection of output directory and custom naming
 
 ### Phase 2: Testing and Compatibility
 
-- [ ] Test on Windows
+- [x] Test on Windows
 - [x] Test on additional macOS versions
 - [ ] Ensure compatibility with different versions of Python (3.x)
 - [ ] Convert multiple types of files (Excel, PowerPoint) into PDF with one single command
