@@ -5,6 +5,7 @@ from docx import Document
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 from docx.shared import Pt
+import tkinter as tk
 from .printer import print_file
 
 def remove_table_borders(doc):
@@ -38,6 +39,16 @@ def add_paragraph_spacing(doc, spacing_value=3):
             para.paragraph_format.space_before = Pt(spacing_value)
             para.paragraph_format.space_after = Pt(spacing_value)
 
+def find_libreoffice():
+    possible_paths = [
+        "C:\\Program Files\\LibreOffice\\program\\soffice.exe",
+        "C:\\Program Files (x86)\\LibreOffice\\program\\soffice.exe",
+    ]
+    for path in possible_paths:
+        if os.path.exists(path):
+            return path
+    return None
+
 def convert_word_to_pdf(word_files, print_after_conversion=False, formatted=False, log_widget=None):
     pdf_files = []
     for word_file in word_files:
@@ -58,7 +69,9 @@ def convert_word_to_pdf(word_files, print_after_conversion=False, formatted=Fals
             pdf_file = word_file_to_convert.replace('.docx', '.pdf')
             
             if platform.system() == "Windows":
-                soffice_path = "C:\\Program Files\\LibreOffice\\program\\soffice.exe"
+                soffice_path = find_libreoffice()
+                if not soffice_path:
+                    raise RuntimeError("LibreOffice not found")
                 command = [soffice_path, '--headless', '--convert-to', 'pdf', word_file_to_convert]
             else:
                 command = ['soffice', '--headless', '--convert-to', 'pdf', word_file_to_convert]
